@@ -28,29 +28,13 @@ public class CaesarCipher
 		{
 			if(strD.equals(strD.toUpperCase()))
 			{
-				if((int)strD.charAt(i)<68) //to check for A,B,C
-				{
-					int Ascii=(((int)strD.charAt(i)-3-65+26)%26)+65;
+                                        int Ascii=(((int)strD.charAt(i)-3-65+26)%26)+65;
 					Decrypt=Decrypt+Character.toString((char)Ascii);
-				}
-				else
-				{
-				int Ascii=(((int)strD.charAt(i)-3-65)%26)+65;
-				Decrypt=Decrypt+Character.toString((char)Ascii);
-				}
-			}
+		         }
 			else
 			{
-				if((int)strD.charAt(i)<100) //to check for a,b,c
-				{
-				int Ascii=(((int)strD.charAt(i)-3-97+26)%26)+97;
+	                        int Ascii=(((int)strD.charAt(i)-3-97+26)%26)+97;
 				Decrypt=Decrypt+Character.toString((char)Ascii);
-				}
-				else
-				{
-					int Ascii=(((int)strD.charAt(i)-3-97)%26)+97;
-					Decrypt=Decrypt+Character.toString((char)Ascii);
-				}
 			}
 		}
 		return Decrypt;
